@@ -6,8 +6,8 @@ Neste desafio técnico, você será responsável por desenvolver um sistema CRUD
 
 ## Requisitos Funcionais
 
-1. O sistema deve ter um endpoint para criar um novo vendedor, recebendo um payload com o código do vendedor.
-2. O sistema deve ter um endpoint para adicionar pagamentos ao vendedor, recebendo um payload contendo o codigo de vendedor e a lista de pagamentos.
+1. O sistema deve ter um endpoint para criar um novo vendedor, recebendo um payload com o nome do vendedor.
+2. O sistema deve ter um endpoint para adicionar pagamentos ao vendedor, recebendo um payload contendo o código de vendedor e a lista de pagamentos.
 3. Cada pagamento deve ser composto por um código identificador, o documento do pagador (CPF/CNPJ) e o status do pagamento.
 4. O sistema deve permitir a consulta de um pagamento específico, filtrando pelo código do pagamento.
 5. O sistema deve permitir a alteração do status de um pagamento específico, identificado pelo código do pagamento.
@@ -52,13 +52,21 @@ POST /api/payment
 **Sugestão payload de Saida:**
 
 ```json
+POST /api/seller
+{
+  "seller_code": "VEN001",
+  "name": "Seller Name"
+}
+
 GET /api/payment/payment_code
 {
-    "seller_code": "VEN001",
-    "payment_code":"PAY001",
-    "doc_payer":"00000000000",
-    "status":"PAYED"
+  "seller_code": "VEN001",
+  "payment_code":"PAY001",
+  "doc_payer":"00000000000",
+  "status":"PAYED"
 }
+
+
 
 ```
 
