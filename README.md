@@ -1,4 +1,4 @@
-# Desafio Técnico - Desenvolvedor Java com Spring Junior
+# Desafio Técnico - Desenvolvedor Java
 
 ## Introdução
 
